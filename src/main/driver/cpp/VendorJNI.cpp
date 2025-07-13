@@ -1,5 +1,6 @@
 #include "jni.h"
 #include "com_peninsula_jni_VendorJNI.h"
+#include "driverheader.h"
 #include <iostream>
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved) {
@@ -19,6 +20,7 @@ JNIEXPORT void JNICALL JNI_OnUnload(JavaVM* vm, void* reserved) {}
 
 JNIEXPORT jint JNICALL Java_com_peninsula_jni_VendorJNI_initialize
   (JNIEnv *, jclass) {
-  std::cout << "Hello World";
+  std::cout << "Hello World from VendorJNI.cpp\n";
+  c_doThing();
   return 0;
 }
