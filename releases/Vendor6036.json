@@ -1,7 +1,7 @@
 {
     "fileName": "Vendor6036.json",
     "name": "Vendor6036",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "frcYear": "2025",
     "uuid": "75b19be2-5cc0-4c29-a54c-8b03149902ef",
     "mavenUrls": [
@@ -12,14 +12,14 @@
         {
             "groupId": "com.peninsula.jni",
             "artifactId": "Vendor6036-java",
-            "version": "0.0.5"
+            "version": "0.0.6"
         }
     ],
     "jniDependencies": [
         {
             "groupId": "com.peninsula.jni",
             "artifactId": "Vendor6036-driver",
-            "version": "0.0.5",
+            "version": "0.0.6",
             "skipInvalidPlatforms": true,
             "isJar": false,
             "validPlatforms": [
@@ -36,7 +36,7 @@
         {
             "groupId": "com.peninsula.jni",
             "artifactId": "Vendor6036-cpp",
-            "version": "0.0.5",
+            "version": "0.0.6",
             "libName": "Vendor",
             "headerClassifier": "headers",
             "sharedLibrary": false,
@@ -53,7 +53,7 @@
         {
             "groupId": "com.peninsula.jni",
             "artifactId": "Vendor6036-driver",
-            "version": "0.0.5",
+            "version": "0.0.6",
             "libName": "VendorDriver",
             "headerClassifier": "headers",
             "sharedLibrary": false,
