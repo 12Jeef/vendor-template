@@ -7,7 +7,7 @@ ext.licenseFile = files("$rootDir/LICENSE.txt")
 
 def templateVendorFile = "Vendor6036.json"
 
-def pubVersion = '0.0.18'
+def pubVersion = '0.0.19'
 
 def outputsFolder = file("$buildDir/outputs")
 
@@ -65,6 +65,14 @@ task cppHeadersZip(type: Zip) {
     from('src/main/native/include') {
         into '/'
     }
+
+    // assume we will always have proto sources
+    from("$buildDir/generated/source/proto/main/cpp") {
+        into '/'
+        // Only include generated C++ headers
+        include "**/*.h"
+    }
+    dependsOn generateProto
 }
 
 task cppSourceZip(type: Zip) {
@@ -79,6 +87,14 @@ task cppSourceZip(type: Zip) {
     from('src/main/native/cpp') {
         into '/'
     }
+
+    // assume we will always have proto sources
+    from("$buildDir/generated/source/proto/main/cpp") {
+        into '/'
+        // Only include generated C++ source files, not headers
+        include "**/*.cc", "**/*.cpp"
+    }
+    dependsOn generateProto
 }
 
 task cppDriverHeadersZip(type: Zip) {
