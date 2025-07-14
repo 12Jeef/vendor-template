@@ -42,6 +42,12 @@ model {
         withType(NativeBinarySpec).all {
             nativeUtils.usePlatformArguments(it)
             nativeUtils.wpi.getVendorDeps().getNativeVendor().cpp(it)
+
+            nativeUtils.useRequiredLibrary(it, "wpiutil_shared")
+            nativeUtils.useRequiredLibrary(it, "wpimath_shared")
+            nativeUtils.useRequiredLibrary(it, "wpinet_shared")
+            nativeUtils.useRequiredLibrary(it, "ntcore_shared")
+            nativeUtils.useRequiredLibrary(it, "wpilib_shared")
         }
     }
 }
